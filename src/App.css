@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -11,28 +11,399 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} */
+/* In your CSS file or CSS-in-JS solution */
+
+
+/* navbar start */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body{
+  background-color: #020133;
+}
+.top {
+  background-color: #102c5d; /* Top section background color */
+   margin-top: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between; /* Distribute items evenly horizontally */
+  align-items: center; /* Vertically align items in the center */
+  padding: 10px; /* Add padding for spacing */
+}
+.logo {
+  color:orangered; /* Text color for the logo */
+  font-size: 25px; /* Adjust the font size as needed */
+  text-decoration: none;
+}
+.logo:hover{
+ border:2px solid #ff4d01;
+}
+.top .logo {
+  mix-blend-mode: normal; /* Adjust blend mode as needed */
+  animation: bounce 03s alternate infinite; /* Apply a continuous bouncing animation */
+  transition: transform 0.3s; /* Smooth transition for transform property */
+  transform: translateY(-10px); /* Initial position, move the image up by 10px */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset the image to its original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move the image up by 10px */
+  }
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; 
+  padding: 0; 
+  gap: 2px;
+  
+}
+/* fade in and color navabr */
+ .navbar li {
+  margin-right: 40px; 
+  color: orangered;
+  margin-bottom: 10px;
+  opacity: 1;
+  transition: 0.3s;
+}
+.navbar li:hover {opacity: 0.6
+}
+/* end navabr transtion */
+
+.navbar li a.active,
+.navbar li a:hover {
+  color: #ff4d01;
+  border-bottom: 0.2rem solid #013cff;
+  padding: 0.5rem 0;
+}
+
+/* navbar end */
+
+
+/* home page start */
+.home .jsimage img:hover {
+  border: 1px solid orangered;
+}
+/* .home .nxjimage img:hover {
+  border: 1px solid orangered;
+  
+} */
+
+.home .nxjimage img{
+  margin: 4rem;
+  width: 35rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+  float: left;
+  padding: 10px;
+  
+}
+.home .jsimage img{
+  margin: 4rem;
+  width: 35rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 10px;
+}
+.home .jsimage img {
+  mix-blend-mode: normal; /* Adjust blend mode as needed */
+  animation: bounce 03s alternate infinite; /* Apply a continuous bouncing animation */
+  transition: transform 0.3s; /* Smooth transition for transform property */
+  transform: translateY(-10px); /* Initial position, move the image up by 10px */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset the image to its original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move the image up by 10px */
+  }
+}
+.home  .rsimage img{
+  margin: 4rem;
+  width: 35rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+  float: left;
+  padding: 10px;
+  
+}
+.home .nsimage img{
+  margin: 4rem;
+  width: 40rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+  padding: 10px;
+}
+
+
+/* social-icon start */
+
+/* .footer .social .social-icon a{
+ text-align: center;
+  padding: 20px;
+} */
+
+/* .social .social-icon:hover {
+  border: 2px solid orangered;
+} */
+/* Center-align all social media icons */
+.social {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Take up the full viewport height */
+}
+
+/* Style your social media icons */
+.social-icon {
+  font-size: 20px; /* Adjust the font size for better visibility */
+   /* Adjust the width as needed */
+  text-align: center;
+  text-decoration: none;
   color: white;
 }
+/* Add a hover effect (optional) */
+.social-icon .linkedin:hover,
+.social-icon .instagram:hover,
+.social-icon .youtube:hover,
+.social-icon .github:hover{
+  background:#ff4d01; /* Change the background color on hover */
+  border: 2px solid orangered; /* Add a border on hover */
+}
+.social-icon .linkedin{
+  margin: 10px; /* Add spacing between icons as needed */
+  border-radius: 20%; /* Use 50% for a circular shape */
+  padding: 10px;
+  background-color: #2196F3;
+}
+.social-icon .instagram{
+  margin:10px;
+  border-radius: 20%;
+  padding: 10px;
+  background-color: red;
+}
+.social-icon .youtube{
+  margin:10px;
+  border-radius: 20%;
+  padding: 10px;
+  background-color: rgba(255, 0, 0, 0.878);
+  align-items: center;
+}
+.social-icon .github{
+  margin:10px;
+  border-radius: 20%;
+  padding: 10px;
+  background-color: black;
+   
+}
+/* social-icon end */
 
-.App-link {
-  color: #61dafb;
+/* social icon bounce */
+.social-icon {
+  mix-blend-mode: normal; /* Adjust blend mode as needed */
+  animation: bounce 1s alternate infinite; /* Apply a continuous bouncing animation */
+  transition: transform 0.3s; /* Smooth transition for transform property */
+  transform: translateY(-10px); /* Initial position, move the image up by 10px */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset the image to its original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move the image up by 10px */
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+
+
+
+
+
+
+/* ABOUT section start */
+.about .row .image img:hover{
+  border: 1px solid orangered;
+}
+.about {
+  background: #020133;
+}
+.about .row {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex-wrap: wrap;
+  
+}
+.about .row .image {
+  text-align: center;
+  flex: 1 1 35rem;
+}
+.about .row .image img {
+  margin: 4rem;
+  width: 19rem;
+  height: auto;
+  border-radius: 5%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+  transition: 0.3s;
+  cursor: pointer;
+}
+/* .about .row .image img:hover {
+  mix-blend-mode: normal;
+  animation: bounce 0.5s infinite alternate;
+  transition: transform 0.3s;
+  transform: translateY(-10px);
+} */
+.about .row .image img {
+  mix-blend-mode: normal; /* Adjust blend mode as needed */
+  animation: bounce 1s alternate infinite; /* Apply a continuous bouncing animation */
+  transition: transform 0.3s; /* Smooth transition for transform property */
+  transform: translateY(-10px); /* Initial position, move the image up by 10px */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset the image to its original position */
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px); /* Move the image up by 10px */
   }
 }
+/* @keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px); Adjust the distance as needed
+  }
+} */
+
+
+.about .row .content {
+  flex: 1 1 45rem;
+  padding: 3rem;
+}
+.about .row .content h3 {
+  color: rgb(224, 70, 19);
+  font-size: 2.5rem;
+}
+.about .row .content .span{
+  color: goldenrod;
+}
+.about .row .content .tag {
+  font-size: 1.4rem;
+  color: #b5eeb7b9;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+.about .row .content p {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 600;
+  text-transform: none;
+  color: #b5eeb7b9;
+}
+.about .row .content .box-container {
+  
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-family: "Nunito";
+  font-weight: 600;
+}
+.about .row .content .box-container .box p {
+  text-transform: none;
+}
+.about .row .content .box-container .box p span {
+  color: goldenrod;
+}
+
+/* about section end */
+
+/* footer start */
+.footer p {
+  display: flex;
+  bottom: 0;
+  width: 100%;
+  background-color:orangered;
+  color: rgb(16, 14, 14);
+  justify-content: center;
+  
+}
+.footer p:hover {
+  text-decoration: underline black;
+  color: black; /* Add an underline on hover */
+}
+
+/* footer end */
+
+/* Skill part start */
+.skills h1{
+  color: orange;
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  font-weight: 25px;
+  font-style: italic;
+}
+.container {
+  width: 100%;
+  background-color: #ddd;
+}
+.skills {
+  text-align: right;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.skills p{
+  color: orangered;
+  text-align: left;
+ 
+}
+
+.html {width: 90%; background-color: #04AA6D; color: black;}
+.css {width: 80%; background-color: #2196F3; color: black;}
+.js {width: 75%; background-color: #e1f436; color: black;}
+.React {width: 70%; background-color:rgb(53, 53, 215); color: black;}
+.Next {width:60%; background-color: green; color: black;}
+.Node {width:65%; background-color: rgb(40, 240, 40); color: black;}
+
+.skills .container:hover{
+  mix-blend-mode: normal; /* Adjust blend mode as needed */
+  animation: bounce 1s alternate infinite; /* Apply a continuous bouncing animation */
+  transition: transform 0.3s; /* Smooth transition for transform property */
+  transform: translateY(-10px); /* Initial position, move the image up by 10px */
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0); /* Reset the image to its original position */
+  }
+  50% {
+    transform: translateY(-10px); /* Move the image up by 10px */
+  }
+}
+
+/* Skill part end */
